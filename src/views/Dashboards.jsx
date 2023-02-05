@@ -1,8 +1,11 @@
 import { Component } from 'react'
 import {ShowRecords} from '../cmps/ShowRecords'
 
+import {recordService} from '../services/record.service'
+
 import androidScreen from '../assets/imgs/androidScreen.png'
 import bigScreen from '../assets/imgs/bigScreen.png'
+
 
 export class Dashboards extends Component {
     state = {
