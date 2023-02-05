@@ -12,7 +12,9 @@
 @import "basics/layout";
 
 // Views
-
+@import "views/home";
+@import "views/dashboards";
 // Components
 @import "cmps/app-footer";
 @import "cmps/app-header";
+
