@@ -4,14 +4,29 @@ const C1_STORAGE_KEY = 'c1'
 const C2_STORAGE_KEY = 'c2'
 
 export const recordService = {
-    startSession,
+    startSessionA,
+    startSessionB,
     getRecordsDbA,
-    getRecordsDbB
+    getRecordsDbB,
+    stopWorkerASession,
+    stopWorkerBSession
 }
 
-async function startSession(){
-    return httpService.post('start')
+async function startSessionA(){
+    httpService.post('dbA')
 }
+
+async function startSessionB(){
+    httpService.post('dbB')
+}
+
+async function stopWorkerASession(){
+    httpService.get('dbA')
+}
+async function stopWorkerBSession(){
+    httpService.get('dbB')
+}
+
 async function getRecordsDbA(){
     return httpService.get(C1_STORAGE_KEY)
 }
