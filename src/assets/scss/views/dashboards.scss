@@ -3,10 +3,16 @@
     height: 100px;
 }
 
+.dashboard{
+    >*{
+        margin-right: 20px;
+    }
+}
+
 .ShowRecords{
     >*{
         display: grid;
-        grid-template-columns: 100px 50px 50px 50px;
+        grid-template-columns: 95px 50px 36px 44px;
         >h1{
             margin-right: 30px;
             margin-bottom: 15px;
@@ -28,4 +34,13 @@
     width: 320px;
     height: 30px;
     padding: 5px;
+}
+
+.site-info{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    border: 1px solid gainsboro;
+    >*{
+        text-align: initial !important;
+    }
 }

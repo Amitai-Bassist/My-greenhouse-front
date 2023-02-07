@@ -11,7 +11,8 @@ function _AppHeader(props) {
                 </NavLink>
                 <nav className='flex space-between app-nav'>
                     <NavLink exact to="/" >Home</NavLink>
-                    <NavLink to="/dashboards" >Dashboards</NavLink>
+                    <NavLink to="/dashboards" >Dashboard</NavLink>
+                    <NavLink to="/solution" >My-Solution</NavLink>
                 </nav>
             </section>
         </header>

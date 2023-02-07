@@ -7,6 +7,7 @@ import { ContactMe } from './cmps/ContactMe';
 
 import {Home} from './views/Home';
 import {Dashboards} from './views/Dashboards'
+import {MySolution} from './views/MySolution'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <AppHeader className="App-header"></AppHeader>
         <main>
           <Switch>
+            <Route path="/solution" component={MySolution} />
             <Route path="/dashboards" component={Dashboards} />
             <Route path="/" component={Home} />
           </Switch>

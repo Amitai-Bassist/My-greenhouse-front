@@ -89,7 +89,7 @@ export class Dashboards extends Component {
         const {dataB} = this.state
         return (
             <section className='container app-view'>
-                <section className=' flex '>
+                <section className='dashboard flex '>
                     <SiteInf></SiteInf>
                     <div>
                         <div>C1</div>
