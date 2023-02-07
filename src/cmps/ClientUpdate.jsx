@@ -23,7 +23,7 @@ export class ClientUpdate extends Component {
                 </div>
                 <div>
                     <h1>Radiation</h1>          
-                    <input type="text" /> 
+                    <input type="text"/> 
                     <div>Par</div>               
                 </div>
             </section>

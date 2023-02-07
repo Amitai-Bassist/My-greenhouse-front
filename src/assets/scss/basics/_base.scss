@@ -22,6 +22,7 @@ body {
 
 .app-view{
     min-height: calc(100vh - 202px);
+    padding-top: 0 !important;
     div{
         text-align: center;
     }

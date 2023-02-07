@@ -1,9 +1,22 @@
-.app-header {
-    .app-nav{
-        gap: 10px;
+.app-nav{
+    gap: 10px;
+    >a{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
     }
+}
+
+.logo{
     .header-logo{
         width: 40px;
         height: 40px;
+        margin-right: 5px;
     }
+    >div{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    
 }

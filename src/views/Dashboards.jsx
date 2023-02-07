@@ -15,7 +15,7 @@ export class Dashboards extends Component {
     state = {
         queryAInterval: null,
         queryBInterval: null,
-        bWorkerOn: false,       
+        bWorkerOn: true,       
         aWorkerOn: true,  
         dataA: {
             tmp: '5', 
