@@ -1,9 +1,13 @@
-export function ShowRecords({tmp,humid,radiation}) {
-    return (
+import { Component } from 'react'
+import {recordsService} from '../services/records.service'
+
+export class ClientUpdate extends Component {
+    render() {
+        return (
             <section className='ShowRecords '>
                 <div>
                     <h1>Temperature</h1>           
-                    <div>{tmp}</div>  
+                    <input type="text" />  
                     <div>°C</div>  
                     <select name="" id="">
                         <option value="">°C</option>    
@@ -13,15 +17,16 @@ export function ShowRecords({tmp,humid,radiation}) {
                 </div>
                 <div>
                     <h1>Humidity</h1>           
-                    <div>{humid}</div> 
+                    <input type="text" /> 
                     <div>%</div>          
                         
                 </div>
                 <div>
                     <h1>Radiation</h1>          
-                    <div>{radiation}</div>  
+                    <input type="text" /> 
                     <div>Par</div>               
                 </div>
             </section>
-    )
+        )
+    }
 }

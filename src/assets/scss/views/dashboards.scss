@@ -1,0 +1,31 @@
+.display-img{
+    width: 100px;
+    height: 100px;
+}
+
+.ShowRecords{
+    >*{
+        display: grid;
+        grid-template-columns: 100px 50px 50px 50px;
+        >h1{
+            margin-right: 30px;
+            margin-bottom: 15px;
+        }
+        >:nth-child(3){
+            text-align: start;
+        }
+    }
+}
+
+.connect-ok{
+    background-color: #008000ad;
+    width: 320px;
+    height: 30px;
+    padding: 5px;
+}
+.connect-disable{
+    background-color: red;
+    width: 320px;
+    height: 30px;
+    padding: 5px;
+}

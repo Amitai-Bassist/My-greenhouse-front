@@ -1,5 +1,7 @@
 import { Component } from 'react'
 import {ShowRecords} from '../cmps/ShowRecords'
+import {SiteInf} from '../cmps/SiteInf'
+import {ClientUpdate} from '../cmps/ClientUpdate'
 
 import {updatesService} from '../services/backendWorker/updates.service'
 import {recordsService} from '../services/records.service'
@@ -13,7 +15,7 @@ export class Dashboards extends Component {
     state = {
         queryAInterval: null,
         queryBInterval: null,
-        bWorkerOn: true,       
+        bWorkerOn: false,       
         aWorkerOn: true,  
         dataA: {
             tmp: '5', 
@@ -88,25 +90,28 @@ export class Dashboards extends Component {
         return (
             <section className='container app-view'>
                 <section className=' flex '>
+                    <SiteInf></SiteInf>
                     <div>
                         <div>C1</div>
-                        <img src={bigScreen} alt="" />
+                        <img className='display-img' src={bigScreen} alt="" />
                         <ShowRecords tmp={dataA.tmp} humid={dataA.humid} radiation={dataA.radiation}></ShowRecords>
                     </div>
                     <div>
                         <div>C2</div>                   
-                        <img src={androidScreen} alt="" />
+                        <img className='display-img' src={androidScreen} alt="" />
                         <ShowRecords tmp={dataB.tmp} humid={dataB.humid} radiation={dataB.radiation}></ShowRecords>
                     </div>
                 </section>
                 {(this.state.bWorkerOn) ? 
                 <section>
-                    <div>Connection between DB-A and DB-B</div>
+                    <div className='connect-ok'>Connection ok between DB-A and DB-B</div>
                     <h1>For Testing:</h1>
                     <button onClick={this.stopWorkerB}>stop B backend update worker</button>
                 </section>:
                 <section>
-                    <div>No Connection between DB-A and DB-B</div> 
+                    <div className='connect-disable'>No Connection between DB-A and DB-B</div> 
+                    <h1>You can update DB-B here locally:</h1>
+                    <ClientUpdate></ClientUpdate>
                     <h1>For Testing:</h1>
                     <button onClick={this.startUpdatingDb}>start backend workers A,B</button>
                 </section>
