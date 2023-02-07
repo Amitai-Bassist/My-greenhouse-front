@@ -3,7 +3,7 @@ import { httpService } from './http.service.js'
 const C1_STORAGE_KEY = 'c1'
 const C2_STORAGE_KEY = 'c2'
 
-export const recordService = {
+export const updatesService = {
     startSessionA,
     startSessionB,
     getRecordsDbA,

@@ -1,7 +1,9 @@
 import { Component } from 'react'
 import {ShowRecords} from '../cmps/ShowRecords'
 
-import {recordService} from '../services/record.service'
+import {updatesService} from '../services/backendWorker/updates.service'
+import {recordsService} from '../services/records.service'
+
 
 import androidScreen from '../assets/imgs/androidScreen.png'
 import bigScreen from '../assets/imgs/bigScreen.png'
@@ -15,18 +17,18 @@ export class Dashboards extends Component {
     
     startUpdatingDb = () => {
         // const updateA = await recordService.startSessionA()
-        recordService.startSessionA()
-        recordService.startSessionB()
+        updatesService.startSessionA()
+        updatesService.startSessionB()
         this.setState({aWorkerOn: true, bWorkerOn:true})
     }
 
     stopWorkerA = () => {
-        recordService.stopWorkerASession()
+        updatesService.stopWorkerASession()
         this.setState({aWorkerOn: false})
     }
 
     stopWorkerB = () => {
-        recordService.stopWorkerBSession()
+        updatesService.stopWorkerBSession()
         this.setState({bWorkerOn: false})
     }
 

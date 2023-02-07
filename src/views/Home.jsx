@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import greenHouse from '../assets/imgs/greenHouse.png'
-import {recordService} from '../services/record.service'
+import {updatesService} from '../services/backendWorker/updates.service'
 
 export class Home extends Component {
     state = {
@@ -11,8 +11,8 @@ export class Home extends Component {
     }
 
     async startUpdatingDb() {
-        const updateA = await recordService.startSessionA()
-        const updateB = await recordService.startSessionB()
+        const updateA = await updatesService.startSessionA()
+        const updateB = await updatesService.startSessionB()
         if (updateB){
             console.log('updating')
         }
