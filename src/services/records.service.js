@@ -7,7 +7,7 @@ import { userService } from './user.service.js'
 
 const STORAGE_KEY_A = 'dbA'
 
-export const carService = {
+export const recordsService = {
     query,
     getById,
     save,
@@ -15,11 +15,9 @@ export const carService = {
     getEmptyCar,
     addCarMsg
 }
-window.cs = carService
 
-
-async function query() {
-    return httpService.get(STORAGE_KEY_A)
+async function query(db) {
+    return httpService.get(db)
 }
 function getById(carId) {
     // return storageService.get(STORAGE_KEY, carId)
