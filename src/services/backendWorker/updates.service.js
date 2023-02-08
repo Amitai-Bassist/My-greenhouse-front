@@ -21,10 +21,10 @@ async function startSessionB(){
 }
 
 async function stopWorkerASession(){
-    httpService.get('dbA')
+    httpService.put('dbA')
 }
 async function stopWorkerBSession(){
-    httpService.get('dbB')
+    httpService.put('dbB')
 }
 
 async function getRecordsDbA(){
