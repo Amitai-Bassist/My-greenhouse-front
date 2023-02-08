@@ -2,7 +2,13 @@ import { Component } from 'react'
 import {recordsService} from '../services/records.service'
 
 export class ClientUpdate extends Component {
+    state = {
+        temperature: '',
+        humidity: '',
+        radiation: ''
+    }
     render() {
+        
         return (
             <section className='ShowRecords '>
                 <div>

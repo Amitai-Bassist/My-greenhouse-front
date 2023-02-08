@@ -41,9 +41,18 @@ export class Home extends Component {
                         Android of old MacDonalds-C2.
                     </p>
                     <p>
-                        Unfortunately, every 3 minutes there is a disconnection of 
-                        18 seconds {`(10% of the time)`} in the synchronization between the databases. In that time session 
-                        he can update database B through his Android.
+                        Unfortunately, 10% of the time there is a disconnection 
+                        in the synchronization between the databases. In that time session 
+                        he can update database B through the dashboard.
+                    </p>
+                    <p>
+                        You are welcome to see the data flow in the dashboard and try to 
+                        update database B while there is no proper connection.
+                    </p>
+                    <p>
+                        In addition, you can see in "My-solution" all the information about my 
+                        solution, the technological tools I used, the architecture of the code 
+                        and videos as well as links to view the code.
                     </p>
                 </section>
             </section>

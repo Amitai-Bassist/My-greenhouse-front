@@ -1,13 +1,28 @@
+header{
+    background-color: $clr7;
+    >.container{
+        background-color: $clr7;
+        padding-bottom: 0;
+        padding-top: 10px;
+    }
+}
 .app-nav{
     gap: 10px;
     >a{
         display: flex;
         align-content: center;
         flex-wrap: wrap;
+        height: 100%;
+        padding-bottom: 10px;
+        &.active{
+            color: $clr2;
+            border-bottom: 1px solid $clr2;
+        }
     }
 }
 
 .logo{
+    padding-bottom: 10px;
     .header-logo{
         width: 40px;
         height: 40px;

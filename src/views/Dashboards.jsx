@@ -30,8 +30,8 @@ export class Dashboards extends Component {
     }
     
     componentDidMount(){
-        this.setState({queryAInterval : setInterval(this.getARecords,500)})
-        this.setState({queryBInterval : setInterval(this.getBRecords,500)})
+        // this.setState({queryAInterval : setInterval(this.getARecords,500)})
+        // this.setState({queryBInterval : setInterval(this.getBRecords,500)})
     }
 
     componentWillUnmount(){
