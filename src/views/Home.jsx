@@ -14,6 +14,7 @@ export class Home extends Component {
 
     connectUser(){
         userService.saveLocalUser()
+        
     }
 
     async startUpdatingDb() {

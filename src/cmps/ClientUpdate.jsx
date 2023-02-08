@@ -32,6 +32,7 @@ export class ClientUpdate extends Component {
                     <input type="text"/> 
                     <div>Par</div>               
                 </div>
+                <button>Update</button>
             </section>
         )
     }

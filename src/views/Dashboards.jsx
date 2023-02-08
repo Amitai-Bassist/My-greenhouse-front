@@ -30,8 +30,8 @@ export class Dashboards extends Component {
     }
     
     componentDidMount(){
-        // this.setState({queryAInterval : setInterval(this.getARecords,500)})
-        // this.setState({queryBInterval : setInterval(this.getBRecords,500)})
+        this.setState({queryAInterval : setInterval(this.getARecords,500)})
+        this.setState({queryBInterval : setInterval(this.getBRecords,500)})
     }
 
     componentWillUnmount(){
@@ -112,12 +112,12 @@ export class Dashboards extends Component {
                     <div className='connect-disable'>No Connection between DB-A and DB-B</div> 
                     <h1>You can update DB-B here locally:</h1>
                     <ClientUpdate></ClientUpdate>
-                    <h1>For Testing:</h1>
-                    <button onClick={this.startUpdatingDb}>start backend workers A,B</button>
+                    {/* <h1>For Testing:</h1>
+                    <button onClick={this.startUpdatingDb}>start backend workers A,B</button> */}
                 </section>
                 }
-                <button onClick={this.stopWorkerA}>stop A backend worker</button>
-                <button onClick={this.getARecords}>query from A</button>
+                {/* <button onClick={this.stopWorkerA}>stop A backend worker</button>
+                <button onClick={this.getARecords}>query from A</button> */}
             </section>
         )
     }
