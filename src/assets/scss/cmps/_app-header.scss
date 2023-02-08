@@ -5,6 +5,20 @@ header{
         padding-bottom: 0;
         padding-top: 10px;
     }
+    .user-img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-self: center;
+        flex-wrap: wrap;
+        padding-bottom: 0px;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 2px 16px rgb(0 0 0 / 15%);
+
+        }
+    }
 }
 .app-nav{
     gap: 10px;
@@ -18,11 +32,18 @@ header{
             color: $clr2;
             border-bottom: 1px solid $clr2;
         }
+        &:hover{
+            color: gray;
+        }
     }
 }
 
 .logo{
     padding-bottom: 10px;
+    &:hover{
+        font-size: 18px;
+
+    }
     .header-logo{
         width: 40px;
         height: 40px;

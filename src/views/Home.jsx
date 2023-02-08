@@ -1,13 +1,19 @@
 import { Component } from 'react'
 import greenHouse from '../assets/imgs/greenHouse.png'
 import {updatesService} from '../services/backendWorker/updates.service'
+import { userService } from '../services/user.service'
 
 export class Home extends Component {
     state = {
         
     }
     componentDidMount(){
+        this.connectUser()
         this.startUpdatingDb()
+    }
+
+    connectUser(){
+        userService.saveLocalUser()
     }
 
     async startUpdatingDb() {

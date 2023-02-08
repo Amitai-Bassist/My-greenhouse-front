@@ -33,3 +33,4 @@ async function getRecordsDbA(){
 async function getRecordsDbB(){
     return httpService.get(C2_STORAGE_KEY)
 }
+

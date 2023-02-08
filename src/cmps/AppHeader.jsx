@@ -1,5 +1,6 @@
 import { NavLink, withRouter } from 'react-router-dom'
 import kolseption from '../assets/imgs/kolseption.png'
+import userImg from '../assets/imgs/user-img.png'
 
 function _AppHeader(props) {
     return (
@@ -13,6 +14,7 @@ function _AppHeader(props) {
                     <NavLink exact to="/" >Home</NavLink>
                     <NavLink to="/dashboards" >Dashboard</NavLink>
                     <NavLink to="/solution" >My-Solution</NavLink>
+                    <img src={userImg} alt="" className='user-img'/>
                 </nav>
             </section>
         </header>
