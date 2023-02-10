@@ -1,0 +1,42 @@
+.my-solution{
+    &.container{
+        padding-top: 0;
+    }
+    a{
+        text-decoration: underline;
+        color: blue;
+    }
+    .side-bar{
+        width: 320px;       
+        >*{
+            padding: 10px;
+            border: 1px solid $clr2;
+            border-top: 0;
+            text-align: start;
+            background-color: $clr7;
+            &:hover{
+                filter: brightness(85%);
+                cursor: pointer;
+            }
+            &.active{
+                filter: brightness(50%);
+                cursor: auto;
+            }
+        }
+        >:first-child{
+            border-top: 1px solid $clr2;
+        }
+    }
+    .solution-content{
+        padding-top: 10px;
+    }
+}
+
+.links{
+    h1{
+        text-align: center;
+    }
+    div{
+        text-align: start;
+    }
+}

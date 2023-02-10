@@ -9,51 +9,26 @@ const STORAGE_KEY_A = 'dbA'
 
 export const recordsService = {
     query,
-    getById,
     save,
-    remove,
-    getEmptyCar,
-    addCarMsg
 }
 
 async function query(db) {
     return httpService.get(db)
 }
-function getById(carId) {
-    // return storageService.get(STORAGE_KEY, carId)
-    return httpService.get(`car/${carId}`)
-}
 
-async function remove(carId) {
-    // await storageService.remove(STORAGE_KEY, carId)
-    return httpService.delete(`car/${carId}`)
-}
-async function save(car) {
-    var savedCar
-    if (car._id) {
-        // savedCar = await storageService.put(STORAGE_KEY, car)
-        savedCar = await httpService.put(`car/${car._id}`, car)
+async function save(record) {
+    var savedRecord
+    if (record._id) {
+        // savedRecord = await storageService.put(STORAGE_KEY, record)
+        savedRecord = await httpService.put(`record/${record._id}`, record)
 
     } else {
         // Later, owner is set by the backend
-        // car.owner = userService.getLoggedinUser()
-        // savedCar = await storageService.post(STORAGE_KEY, car)
-        savedCar = await httpService.post('car', car)
+        // record.owner = userService.getLoggedinUser()
+        // savedRecord = await storageService.post(STORAGE_KEY, record)
+        savedRecord = await httpService.post('record', record)
     }
-    return savedCar
-}
-
-async function addCarMsg(carId, txt) {
-    const savedMsg = await httpService.post(`car/${carId}/msg`, {txt})
-    return savedMsg
-}
-
-
-function getEmptyCar() {
-    return {
-        vendor: 'Susita-' + (Date.now() % 1000),
-        price: utilService.getRandomIntInclusive(1000, 9000),
-    }
+    return savedRecord
 }
 
 

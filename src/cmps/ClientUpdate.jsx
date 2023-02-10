@@ -7,6 +7,18 @@ export class ClientUpdate extends Component {
         humidity: '',
         radiation: ''
     }
+
+    onUpdate(){
+        recordsService.save(
+            {
+                _id: '63e33d2d36e9a97bfa9173d2',
+                temperature: this.state.temperature,
+                humidity: this.state.humidity,
+                radiation: this.state.radiation  
+            }
+        )
+    }
+
     render() {
         
         return (
