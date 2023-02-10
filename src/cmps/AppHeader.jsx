@@ -1,8 +1,11 @@
 import { NavLink, withRouter } from 'react-router-dom'
+import {UserNav} from '../cmps/UserNav'
+
 import kolseption from '../assets/imgs/kolseption.png'
 import userImg from '../assets/imgs/user-img.png'
 
 function _AppHeader(props) {
+    
     return (
         <header className="app-header">
             <section className="container flex space-between">
@@ -17,6 +20,7 @@ function _AppHeader(props) {
                     <img src={userImg} alt="" className='user-img'/>
                 </nav>
             </section>
+            <UserNav></UserNav>
         </header>
     )
 }
