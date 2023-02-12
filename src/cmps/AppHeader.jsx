@@ -3,6 +3,7 @@ import { NavLink, withRouter } from 'react-router-dom'
 
 import kolseption from '../assets/imgs/kolseption.png'
 import userImg from '../assets/imgs/user-img.png'
+import {UserNotification} from '../cmps/UserNotification'
 
 function _AppHeader(props) {
     
@@ -21,6 +22,7 @@ function _AppHeader(props) {
                 </nav>
             </section>
             {/* <UserNav></UserNav> */}
+            <UserNotification></UserNotification>
         </header>
     )
 }

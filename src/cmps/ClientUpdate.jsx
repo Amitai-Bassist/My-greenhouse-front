@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import {recordsService} from '../services/records.service'
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export class ClientUpdate extends Component {
     state = {

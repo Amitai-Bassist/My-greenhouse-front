@@ -10,6 +10,8 @@ import {Dashboards} from './views/Dashboards'
 import {MySolution} from './views/MySolution'
 
 
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+
 function App() {
   return (
     <Router>

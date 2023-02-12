@@ -9,7 +9,7 @@ import {recordsService} from '../services/records.service'
 
 import androidScreen from '../assets/imgs/androidScreen.png'
 import bigScreen from '../assets/imgs/bigScreen.png'
-
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export class Dashboards extends Component {
     state = {
@@ -32,6 +32,7 @@ export class Dashboards extends Component {
     componentDidMount(){
         this.setState({queryAInterval : setInterval(this.getARecords,500)})
         this.setState({queryBInterval : setInterval(this.getBRecords,500)})
+        
     }
 
     componentWillUnmount(){
@@ -71,6 +72,7 @@ export class Dashboards extends Component {
             data.humidity === this.state.dataB.humid &&
             data.radiation === this.state.dataB.radiation){
                 this.setState({bWorkerOn: false}) 
+                NotificationManager.warning('Warning message', 'No connection between A and B', 700);
                 return   
             } else if (this.state.bWorkerOn){
 

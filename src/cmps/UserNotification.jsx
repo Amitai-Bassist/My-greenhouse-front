@@ -3,9 +3,9 @@ import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export class UserNotification extends Component {
     componentDidMount(){
-        NotificationManager.info('Info message','Welcome back Old McDonald!')
-        NotificationManager.success('Success message', 'Database A is updating!');
-        NotificationManager.success('Success message', 'Database B is synchronized!');
+        NotificationManager.info('Info message','Welcome back Old McDonald!',600)
+        NotificationManager.success('Success message', 'Database A is updating!',1150);
+        NotificationManager.success('Success message', 'Database B is synchronized!',1600);
     }
     
     createNotification = (type) => {
