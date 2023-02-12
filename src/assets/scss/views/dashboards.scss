@@ -20,6 +20,9 @@
         >:nth-child(3){
             text-align: start;
         }
+        >input{
+            margin-right: 10px;
+        }
     }
 }
 
@@ -42,5 +45,15 @@
     border: 1px solid gainsboro;
     >*{
         text-align: initial !important;
+    }
+}
+
+.dashboard-explain{
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid gainsboro;
+    >*{
+        text-align: start !important;
+
     }
 }

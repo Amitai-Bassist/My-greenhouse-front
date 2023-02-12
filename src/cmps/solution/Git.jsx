@@ -5,7 +5,7 @@ export function Git() {
     return (
         <section className="links">
             <h1>Links to my code and cloud</h1>
-
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vF6nAJterlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <ul>
                 <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>Git:
                 <li>
@@ -62,8 +62,8 @@ export function Git() {
                         </a>
                     </div>
                 </li>
-
             </ul>
+            
         </section>
     )
 }

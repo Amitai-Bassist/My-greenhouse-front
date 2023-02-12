@@ -2,10 +2,10 @@ import { Component } from 'react'
 import {ShowRecords} from '../cmps/ShowRecords'
 import {SiteInf} from '../cmps/SiteInf'
 import {ClientUpdate} from '../cmps/ClientUpdate'
+import {DashboardExplain} from '../cmps/DashboardExplain'
 
 import {updatesService} from '../services/backendWorker/updates.service'
 import {recordsService} from '../services/records.service'
-
 
 import androidScreen from '../assets/imgs/androidScreen.png'
 import bigScreen from '../assets/imgs/bigScreen.png'
@@ -102,20 +102,23 @@ export class Dashboards extends Component {
                         <ShowRecords tmp={dataB.tmp} humid={dataB.humid} radiation={dataB.radiation}></ShowRecords>
                     </div>
                 </section>
-                {(this.state.bWorkerOn) ? 
-                <section>
-                    <div className='connect-ok'>Connection ok between DB-A and DB-B</div>
-                    <h1>For Testing:</h1>
-                    <button onClick={this.stopWorkerB}>stop B backend update worker</button>
-                </section>:
-                <section>
-                    <div className='connect-disable'>No Connection between DB-A and DB-B</div> 
-                    <h1>You can update DB-B here locally:</h1>
-                    <ClientUpdate></ClientUpdate>
-                    {/* <h1>For Testing:</h1>
-                    <button onClick={this.startUpdatingDb}>start backend workers A,B</button> */}
-                </section>
-                }
+                <div className='flex'>
+                    {(this.state.bWorkerOn) ? 
+                    <section>
+                        <div className='connect-ok'>Connection ok between DB-A and DB-B</div>
+                        {/* <h1>For Testing:</h1> */}
+                        {/* <button onClick={this.stopWorkerB}>stop B backend update worker</button> */}
+                    </section>:
+                    <section>
+                        <div className='connect-disable'>No Connection between DB-A and DB-B</div> 
+                        <h1>You can update DB-B here locally:</h1>
+                        <ClientUpdate></ClientUpdate>
+                        {/* <h1>For Testing:</h1>
+                        <button onClick={this.startUpdatingDb}>start backend workers A,B</button> */}
+                    </section>
+                    }
+                    <DashboardExplain></DashboardExplain>   
+                </div>
                 {/* <button onClick={this.stopWorkerA}>stop A backend worker</button>
                 <button onClick={this.getARecords}>query from A</button> */}
             </section>

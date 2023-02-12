@@ -1,15 +1,14 @@
-export function ShowRecords({tmp,humid,radiation}) {
-    return (
+import { Component } from 'react'
+export class ShowRecords extends Component {
+
+    render (){
+        const {tmp,humid,radiation} = this.props
+        return(
             <section className='ShowRecords '>
                 <div>
                     <h1>Temperature</h1>           
                     <div>{tmp}</div>  
                     <div>°C</div>  
-                    <select name="" id="">
-                        <option value="">°C</option>    
-                        <option value="">°F</option>    
-                        <option value="">K</option>    
-                    </select>       
                 </div>
                 <div>
                     <h1>Humidity</h1>           
@@ -23,5 +22,7 @@ export function ShowRecords({tmp,humid,radiation}) {
                     <div>Par</div>               
                 </div>
             </section>
-    )
+        )
+    }
+    
 }

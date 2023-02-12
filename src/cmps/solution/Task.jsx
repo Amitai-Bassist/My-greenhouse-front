@@ -4,6 +4,7 @@ export function Task() {
     return (
         <section>
             <div>The Task:</div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/w_N93qSCq-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <h1>System overview</h1>
             <ul>
                 <li>Given a system with two independent databases : A,B.</li>

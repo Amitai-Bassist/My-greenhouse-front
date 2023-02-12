@@ -8,13 +8,18 @@ export class ClientUpdate extends Component {
         radiation: ''
     }
 
-    onUpdate(){
+    handleChange = (ev) => {
+        console.log(ev.target.name)
+        this.setState({[ev.target.name]: ev.target.value})
+    }
+
+    onUpdate(state){
         recordsService.save(
             {
                 _id: '63e33d2d36e9a97bfa9173d2',
-                temperature: this.state.temperature,
-                humidity: this.state.humidity,
-                radiation: this.state.radiation  
+                temperature: state.temperature,
+                humidity: state.humidity,
+                radiation: state.radiation  
             }
         )
     }
@@ -25,26 +30,26 @@ export class ClientUpdate extends Component {
             <section className='ShowRecords '>
                 <div>
                     <h1>Temperature</h1>           
-                    <input type="text" />  
+                    <input name='temperature' type="text" onChange={this.handleChange} value={this.state.temperature}/>  
                     <div>°C</div>  
-                    <select name="" id="">
+                    {/* <select name="" id="">
                         <option value="">°C</option>    
                         <option value="">°F</option>    
                         <option value="">K</option>    
-                    </select>       
+                    </select>        */}
                 </div>
                 <div>
                     <h1>Humidity</h1>           
-                    <input type="text" /> 
+                    <input type="text" name='humidity' onChange={this.handleChange} value={this.state.humidity}/> 
                     <div>%</div>          
                         
                 </div>
                 <div>
                     <h1>Radiation</h1>          
-                    <input type="text"/> 
+                    <input type="text" name='radiation' onChange={this.handleChange} value={this.state.radiation}/> 
                     <div>Par</div>               
                 </div>
-                <button>Update</button>
+                <button onClick={()=> this.onUpdate(this.state)}>Update</button>
             </section>
         )
     }
