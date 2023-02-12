@@ -13,8 +13,8 @@ export class ClientUpdate extends Component {
         this.setState({[ev.target.name]: ev.target.value})
     }
 
-    onUpdate(state){
-        recordsService.save(
+    onUpdate = async (state) => {
+        const update = await recordsService.save(
             {
                 _id: '63e33d2d36e9a97bfa9173d2',
                 temperature: state.temperature,
@@ -22,6 +22,7 @@ export class ClientUpdate extends Component {
                 radiation: state.radiation  
             }
         )
+        console.log('update',update)
     }
 
     render() {

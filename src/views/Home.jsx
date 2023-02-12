@@ -2,6 +2,7 @@ import { Component } from 'react'
 import {FrameStory} from '../cmps/FrameStory'
 import {updatesService} from '../services/backendWorker/updates.service'
 import { userService } from '../services/user.service'
+import {UserNotification} from '../cmps/UserNotification'
 
 export class Home extends Component {
     state = {
@@ -29,6 +30,7 @@ export class Home extends Component {
         return (
             <section className='container grid app-view'>
                 <FrameStory></FrameStory>
+                <UserNotification></UserNotification>
             </section>
         )
     }
